@@ -85,3 +85,11 @@ nginx.vars
 
 global.env
 .*.bak*
+
+
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+terraform/environment.tf
