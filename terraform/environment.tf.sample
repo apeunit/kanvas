@@ -1,0 +1,194 @@
+variable "service_environments" {
+  type = list(object({
+    key = string
+    environment = list(object({
+      name  = string
+      value = string
+    }))
+  }))
+  default = [
+    {
+      key = "store-front"
+      environment = [
+        {
+          name  = "REACT_APP_PORT"
+          value = ""
+        },
+        {
+          name  = "REACT_APP_API_SERVER_BASE_URL"
+          value = ""
+        },
+        {
+          name  = "REACT_APP_STRIPE_PK_KEY"
+          value = ""
+        }
+      ]
+    },
+    {
+      key = "admin-front"
+      environment = [
+        {
+          name  = "REACT_APP_PORT"
+          value = ""
+        }
+      ]
+    },
+    {
+      key = "admin-api"
+      environment = [
+        {
+          name  = "ADMIN_PRIVATE_KEY"
+          value = ""
+        },
+        {
+          name  = "AWS_S3_BUCKET"
+          value = "" 
+        },
+        {
+          name  = "AWS_S3_ACCESS_KEY"
+          value = "" 
+        },
+        {
+          name  = "AWS_S3_KEY_SECRET"
+          value = "" 
+        },
+        {
+         name  = "JWT_EXPIRATION_TIME"
+          value = ""  
+        },
+        {
+         name  = "JWT_SECRET"
+          value = ""  
+        },
+        {
+         name  = "BEHIND_PROXY"
+          value = ""  
+        },
+        {
+         name  = "STORE_API"
+          value = ""  
+        }
+      ]
+    },
+    {
+      key = "store-api"
+      environment = [
+        {
+          name  = "JWT_EXPIRATION_TIME"
+          value = ""
+        },
+        {
+          name  = "JWT_SECRET"
+          value = ""
+        },
+        {
+          name  = "AWS_S3_BUCKET"
+          value = ""
+        },
+        {
+          name  = "AWS_S3_ACCESS_KEY"
+          value = ""
+        },
+        {
+          name  = "AWS_S3_KEY_SECRET"
+          value = ""
+        },
+        {
+          name  = "STRIPE_SECRET"
+          value = ""
+        },
+        {
+          name  = "STRIPE_WEBHOOK_SECRET"
+          value = ""
+        },
+        {
+          name  = "PINATA_API_KEY"
+          value = ""
+        },
+        {
+          name  = "PINATA_API_SECRET"
+          value = ""
+        },
+        {
+          name  = "CART_EXPIRATION_MILLI_SECS"
+          value = ""
+        },
+        {
+          name  = "ORDER_EXPIRATION_MILLI_SECS"
+          value = ""
+        },
+        {
+          name  = "MINTER_TZ_ADDRESS"
+          value = ""
+        },
+        {
+          name  = "ADMIN_PUBLIC_KEY"
+          value = ""
+        },
+        {
+          name  = "BEHIND_PROXY"
+          value = ""
+        },
+        {
+          name  = "PROFILE_PICTURES_ENABLED"
+          value = ""
+        },
+        {
+          name  = "KANVAS_CONTRACT"
+          value = ""
+        },
+        {
+          name  = "TEZOS_NETWORK"
+          value = ""
+        },
+        {
+          name  = "CACHE_TTL"
+          value = ""
+        },
+        {
+          name  = "CART_MAX_ITEMS"
+          value = ""
+        },
+        {
+          name  = "API_KEY_SECRET"
+          value = ""
+        },
+        {
+          name  = "TEZPAY_PAYPOINT_ADDRESS"
+          value = ""
+        },
+        {
+          name  = "KANVAS_API_PORT"
+          value = ""
+        }
+      ]
+    },
+    {
+      key = "peppermint"
+      environment = [
+        {
+          name  = "REACT_APP_PORT"
+          value = ""
+        }
+      ]
+    },
+    {
+      key = "admin-quepasa"
+      environment = [
+        {
+          name  = "REACT_APP_PORT"
+          value = ""
+        }
+      ]
+    },
+    {
+      key = "store-quepasa"
+      environment = [
+        {
+          name  = "CONTRACT_SETTINGS"
+          value = ""
+        }
+      ]
+    }
+  ]
+}
